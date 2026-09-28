@@ -35,7 +35,9 @@ def bas(baslik, aciklama, p, aktif=None, og=False):
         ogm = f'''<meta property="og:type" content="website">
 <meta property="og:title" content="RepliQuotes · Aklındaki repliği anında bul">
 <meta property="og:description" content="Film ve dizi repliklerini ara, yapım yapım keşfet, kendi listeni oluştur, oyna ve paylaş.">
-<meta property="og:image" content="img/og.jpg">
+<meta property="og:image" content="https://repliquotes.com/img/og.jpg">
+<meta property="og:url" content="https://repliquotes.com/">
+<link rel="canonical" href="https://repliquotes.com/">
 <meta name="twitter:card" content="summary_large_image">
 '''
     def nav(ad, yol, ik, etiket):
