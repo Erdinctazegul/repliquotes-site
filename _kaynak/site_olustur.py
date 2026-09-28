@@ -64,7 +64,6 @@ def bas(baslik, aciklama, p, aktif=None, og=False):
     </a>
     <nav class="menu" aria-label="Ana menü">
       <a class="yazi" href="{p}#ozellikler">Özellikler</a>
-      <a class="yazi" href="{p}#oyunlar">Oyunlar</a>
       {nav("destek", "destek/", "destek", "Destek")}
       {nav("gizlilik", "gizlilik/", "kalkan", "Gizlilik")}
     </nav>
@@ -184,7 +183,7 @@ def destek():
       <p class="ozet-yazi">Bir sorun mu var ya da bir önerin mi? Aşağıda en çok sorulan soruların cevapları var; bulamazsan bize yaz, genellikle 2 iş günü içinde dönüyoruz.</p>
       <div class="bas-alt">
         {dil_sec()}
-        <span class="tarih">Son güncelleme: 26 Eylül 2026</span>
+        <span class="tarih">Son güncelleme: 28 Eylül 2026</span>
       </div>
       <div class="hizli">
         <a href="mailto:{MAIL}"><span class="ik">{IK["posta"]}</span><b>Bize yaz</b><span>{MAIL}</span></a>
@@ -263,7 +262,7 @@ def gizlilik():
       <p class="ozet-yazi">Hangi verileri topladığımızı, neden topladığımızı, kimlerle paylaştığımızı ve verilerini nasıl silebileceğini açıkça anlatıyoruz.</p>
       <div class="bas-alt">
         {dil_sec()}
-        <span class="tarih">Son güncelleme: 26 Eylül 2026</span>
+        <span class="tarih">Son güncelleme: 28 Eylül 2026</span>
       </div>
     </div>
   </section>
