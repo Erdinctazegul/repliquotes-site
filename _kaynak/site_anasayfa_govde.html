@@ -1,36 +1,3 @@
-<!DOCTYPE html>
-<html lang="tr">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>RepliQuotes · Film ve dizi repliklerini bul, oyna, paylaş</title>
-<meta name="description" content="Aklındaki repliği saniyeler içinde bul. Film ve dizilerden yüz binlerce replik, yapım sayfaları, kendi replik listelerin, 4 oyun ve Makara ile anında rakip.">
-<meta name="theme-color" content="#0B0B0D">
-<link rel="icon" type="image/png" href="favicon.png">
-<link rel="apple-touch-icon" href="apple-touch-icon.png">
-<meta property="og:type" content="website">
-<meta property="og:title" content="RepliQuotes · Aklındaki repliği anında bul">
-<meta property="og:description" content="Film ve dizi repliklerini ara, yapım yapım keşfet, kendi listeni oluştur, oyna ve paylaş.">
-<meta property="og:image" content="img/og.jpg">
-<meta name="twitter:card" content="summary_large_image">
-<link rel="stylesheet" href="assets/site.css">
-</head>
-<body>
-
-<header class="ust">
-  <div class="kap">
-    <a class="logo" href="./" aria-label="RepliQuotes ana sayfa">
-      <img src="img/ikon.png" alt="">
-      <span class="marka">REPLI<span>QUOTES</span></span>
-    </a>
-    <nav class="menu" aria-label="Ana menü">
-      <a class="yazi" href="#ozellikler">Özellikler</a>
-      <a class="yazi" href="#oyunlar">Oyunlar</a>
-      <a class="nav-dugme" href="destek/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/><path d="M9.5 9.5a2.5 2.5 0 1 1 3.3 2.4c-.5.2-.8.6-.8 1.1v.5"/><path d="M12 16.5h.01"/></svg>Destek</a>
-      <a class="nav-dugme" href="gizlilik/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v6c0 4.5-3 7.7-7 9-4-1.3-7-4.5-7-9V6l7-3z"/><path d="M9 12l2 2 4-4"/></svg>Gizlilik</a>
-    </nav>
-  </div>
-</header>
 
 <main>
 
@@ -41,17 +8,14 @@
       <div class="ust-baslik">Film ve dizi replikleri</div>
       <h1>Aklındaki repliği <em>anında bul</em></h1>
       <p class="alt">Hatırladığın birkaç kelimeyi yaz; RepliQuotes yüz binlerce replik arasından doğrusunu bulur, hangi yapımda, hangi bölümde ve kaçıncı dakikada geçtiğini gösterir. Sonra listene ekle, oyna, paylaş.</p>
-      <div class="magazalar">
-        <a class="magaza" href="#indir" aria-label="App Store'da yakında"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.37 12.63c-.02-2.2 1.8-3.26 1.88-3.31-1.02-1.5-2.62-1.7-3.19-1.72-1.36-.14-2.65.8-3.34.8-.69 0-1.75-.78-2.88-.76-1.48.02-2.85.86-3.61 2.19-1.54 2.67-.39 6.62 1.11 8.79.73 1.06 1.6 2.25 2.74 2.21 1.1-.04 1.51-.71 2.84-.71 1.33 0 1.7.71 2.86.69 1.18-.02 1.93-1.08 2.65-2.14.84-1.23 1.18-2.42 1.2-2.48-.03-.01-2.3-.88-2.32-3.5zM14.2 6.17c.61-.74 1.02-1.76.9-2.78-.88.04-1.94.58-2.57 1.32-.56.65-1.06 1.7-.93 2.7.98.08 1.99-.5 2.6-1.24z"/></svg><span><small>Yakında</small><strong>App Store</strong></span></a>
-        <a class="magaza" href="#indir" aria-label="Google Play'de yakında"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#34A853" d="M3.6 2.3 13.4 12 3.6 21.7c-.4-.2-.6-.6-.6-1.1V3.4c0-.5.2-.9.6-1.1z"/><path fill="#FBBC04" d="M16.8 8.6 13.4 12l3.4 3.4 3.9-2.2c.7-.4.7-1.4 0-1.8z"/><path fill="#4285F4" d="M3.6 2.3c.3-.2.8-.2 1.2 0l12 6.3-3.4 3.4z"/><path fill="#EA4335" d="M13.4 12l3.4 3.4-12 6.3c-.4.2-.9.2-1.2 0z"/></svg><span><small>Yakında</small><strong>Google Play</strong></span></a>
-      </div>
+      {{MAGAZALAR}}
       <div class="dugmeler ikincil-satir">
         <a class="dugme ikincil" href="#ozellikler">Özellikleri gör</a>
       </div>
     </div>
     <div class="vitrin" aria-hidden="true">
-      <div class="telefon t1"><img src="img/kesfet.webp" srcset="img/kesfet.webp 720w, img/kesfet@2x.webp 1080w" sizes="(max-width: 560px) 46vw, 300px" alt="" width="720" height="1564" decoding="async"></div>
-      <div class="telefon t2"><img src="img/arama.webp" srcset="img/arama.webp 720w, img/arama@2x.webp 1080w" sizes="(max-width: 560px) 46vw, 300px" alt="" width="720" height="1564" decoding="async"></div>
+      <div class="telefon t1">{{IMG kesfet ""}}</div>
+      <div class="telefon t2">{{IMG arama ""}}</div>
     </div>
   </div>
 </section>
@@ -82,7 +46,7 @@
         <li><span><b>Tek dokunuşla sakla.</b> Beğendiğin repliği listene ekle ya da arkadaşlarınla paylaş.</span></li>
       </ul>
     </div>
-    <div class="gorsel"><div class="telefon"><img src="img/arama.webp" srcset="img/arama.webp 720w, img/arama@2x.webp 1080w" sizes="(max-width: 560px) 46vw, 300px" alt="Arama ekranı: 'tehlike benim' için 31 sonuç" width="720" height="1564" decoding="async" loading="lazy"></div></div>
+    <div class="gorsel"><div class="telefon">{{IMG arama "Arama ekranı: 'tehlike benim' için 31 sonuç"}}</div></div>
   </div>
 </section>
 
@@ -100,7 +64,7 @@
         <li><span><b>Hemen kullan.</b> Her replikte "Listeye ekle" ve "Paylaş" düğmeleri.</span></li>
       </ul>
     </div>
-    <div class="gorsel"><div class="telefon"><img src="img/yapim.webp" srcset="img/yapim.webp 720w, img/yapim@2x.webp 1080w" sizes="(max-width: 560px) 46vw, 300px" alt="Breaking Bad yapım sayfası" width="720" height="1564" decoding="async" loading="lazy"></div></div>
+    <div class="gorsel"><div class="telefon">{{IMG yapim "Breaking Bad yapım sayfası"}}</div></div>
   </div>
 </section>
 
@@ -119,7 +83,7 @@
         <li><span><b>Topluluğu keşfet.</b> Diğer kullanıcıların listelerini gez, beğen, yeni replikler bul.</span></li>
       </ul>
     </div>
-    <div class="gorsel"><div class="telefon"><img src="img/liste.webp" srcset="img/liste.webp 720w, img/liste@2x.webp 1080w" sizes="(max-width: 560px) 46vw, 300px" alt="Game of Thrones replik listesi" width="720" height="1564" decoding="async" loading="lazy"></div></div>
+    <div class="gorsel"><div class="telefon">{{IMG liste "Game of Thrones replik listesi"}}</div></div>
   </div>
 </section>
 
@@ -136,7 +100,7 @@
         <li><span><b>Hesap gerekmez.</b> Arama, keşif ve zar giriş yapmadan da çalışır.</span></li>
       </ul>
     </div>
-    <div class="gorsel"><div class="telefon"><img src="img/zar.webp" srcset="img/zar.webp 720w, img/zar@2x.webp 1080w" sizes="(max-width: 560px) 46vw, 300px" alt="Şaşırt Beni zarı ve çıkan replik" width="720" height="1564" decoding="async" loading="lazy"></div></div>
+    <div class="gorsel"><div class="telefon">{{IMG zar "Şaşırt Beni zarı ve çıkan replik"}}</div></div>
   </div>
 </section>
 
@@ -150,19 +114,19 @@
     </div>
     <div class="oyun-izgara">
       <article class="oyun-kart">
-        <div class="telefon"><img src="img/quiz.webp" srcset="img/quiz.webp 720w, img/quiz@2x.webp 1080w" sizes="(max-width: 560px) 46vw, 300px" alt="Replik Quiz oyun ekranı" width="720" height="1564" decoding="async" loading="lazy"></div>
+        <div class="telefon">{{IMG quiz "Replik Quiz oyun ekranı"}}</div>
         <div><div class="no">OYUN 01</div><h3>Replik Quiz</h3><p>Replik hangi yapımdan? Dört şıktan doğrusunu seç, hızlı cevapla bonus kap.</p></div>
       </article>
       <article class="oyun-kart">
-        <div class="telefon"><img src="img/terazi.webp" srcset="img/terazi.webp 720w, img/terazi@2x.webp 1080w" sizes="(max-width: 560px) 46vw, 300px" alt="Puan Terazisi oyun ekranı" width="720" height="1564" decoding="async" loading="lazy"></div>
+        <div class="telefon">{{IMG terazi "Puan Terazisi oyun ekranı"}}</div>
         <div><div class="no">OYUN 02</div><h3>Puan Terazisi</h3><p>İki yapım karşı karşıya. Sağdakinin IMDb puanı daha yüksek mi, alçak mı?</p></div>
       </article>
       <article class="oyun-kart">
-        <div class="telefon"><img src="img/filmografi.webp" srcset="img/filmografi.webp 720w, img/filmografi@2x.webp 1080w" sizes="(max-width: 560px) 46vw, 300px" alt="Filmografi oyun ekranı" width="720" height="1564" decoding="async" loading="lazy"></div>
+        <div class="telefon">{{IMG filmografi "Filmografi oyun ekranı"}}</div>
         <div><div class="no">OYUN 03</div><h3>Filmografi</h3><p>Sekiz yapımdan dördü o oyuncunun. Hangileri olduğunu rakibinden önce bul.</p></div>
       </article>
       <article class="oyun-kart">
-        <div class="telefon"><img src="img/atesvesu.webp" srcset="img/atesvesu.webp 720w, img/atesvesu@2x.webp 1080w" sizes="(max-width: 560px) 46vw, 300px" alt="Ateş ve Su oyun ekranı" width="720" height="1564" decoding="async" loading="lazy"></div>
+        <div class="telefon">{{IMG atesvesu "Ateş ve Su oyun ekranı"}}</div>
         <div><div class="no">OYUN 04</div><h3>Ateş ve Su</h3><p>Fotoğraftaki oyuncuyu tanı, doğru bildikçe pistte öne geç.</p></div>
       </article>
     </div>
@@ -183,7 +147,7 @@
         <li><span><b>Arkadaş ligi.</b> Arkadaşlarınla kendi ligini kur, ay sonunda zirvede kim var gör.</span></li>
       </ul>
     </div>
-    <div class="gorsel"><div class="telefon"><img src="img/makara.webp" srcset="img/makara.webp 720w, img/makara@2x.webp 1080w" sizes="(max-width: 560px) 46vw, 300px" alt="Makara eşleşme ekranı" width="720" height="1564" decoding="async" loading="lazy"></div></div>
+    <div class="gorsel"><div class="telefon">{{IMG makara "Makara eşleşme ekranı"}}</div></div>
   </div>
 </section>
 
@@ -200,7 +164,7 @@
         <li><span><b>Tek dokunuşla paylaş.</b> Hazırladığın afişi kaydet ya da doğrudan gönder.</span></li>
       </ul>
     </div>
-    <div class="gorsel"><div class="telefon"><img src="img/studyo.webp" srcset="img/studyo.webp 720w, img/studyo@2x.webp 1080w" sizes="(max-width: 560px) 46vw, 300px" alt="Afiş stüdyosu" width="720" height="1560" decoding="async" loading="lazy"></div></div>
+    <div class="gorsel"><div class="telefon">{{IMG studyo "Afiş stüdyosu"}}</div></div>
   </div>
 </section>
 
@@ -218,7 +182,7 @@
         <li><span><b>Güvenli topluluk.</b> Bildir, sessize al ve engelle; küfürlü içerik varsayılan olarak bulanık gelir.</span></li>
       </ul>
     </div>
-    <div class="gorsel"><div class="telefon"><img src="img/akis.webp" srcset="img/akis.webp 720w, img/akis@2x.webp 1080w" sizes="(max-width: 560px) 46vw, 300px" alt="Akış ekranı" width="720" height="1564" decoding="async" loading="lazy"></div></div>
+    <div class="gorsel"><div class="telefon">{{IMG akis "Akış ekranı"}}</div></div>
   </div>
 </section>
 
@@ -228,10 +192,7 @@
     <img class="ikon" src="img/ikon.png" alt="RepliQuotes uygulama ikonu" width="96" height="96">
     <h2>Repliğini bul, <em>listene ekle, oyna.</em></h2>
     <p>RepliQuotes çok yakında App Store ve Google Play'de, ücretsiz. Soruların ya da önerilerin için bize her zaman yazabilirsin.</p>
-    <div class="magazalar">
-        <a class="magaza" href="#indir" aria-label="App Store'da yakında"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.37 12.63c-.02-2.2 1.8-3.26 1.88-3.31-1.02-1.5-2.62-1.7-3.19-1.72-1.36-.14-2.65.8-3.34.8-.69 0-1.75-.78-2.88-.76-1.48.02-2.85.86-3.61 2.19-1.54 2.67-.39 6.62 1.11 8.79.73 1.06 1.6 2.25 2.74 2.21 1.1-.04 1.51-.71 2.84-.71 1.33 0 1.7.71 2.86.69 1.18-.02 1.93-1.08 2.65-2.14.84-1.23 1.18-2.42 1.2-2.48-.03-.01-2.3-.88-2.32-3.5zM14.2 6.17c.61-.74 1.02-1.76.9-2.78-.88.04-1.94.58-2.57 1.32-.56.65-1.06 1.7-.93 2.7.98.08 1.99-.5 2.6-1.24z"/></svg><span><small>Yakında</small><strong>App Store</strong></span></a>
-        <a class="magaza" href="#indir" aria-label="Google Play'de yakında"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#34A853" d="M3.6 2.3 13.4 12 3.6 21.7c-.4-.2-.6-.6-.6-1.1V3.4c0-.5.2-.9.6-1.1z"/><path fill="#FBBC04" d="M16.8 8.6 13.4 12l3.4 3.4 3.9-2.2c.7-.4.7-1.4 0-1.8z"/><path fill="#4285F4" d="M3.6 2.3c.3-.2.8-.2 1.2 0l12 6.3-3.4 3.4z"/><path fill="#EA4335" d="M13.4 12l3.4 3.4-12 6.3c-.4.2-.9.2-1.2 0z"/></svg><span><small>Yakında</small><strong>Google Play</strong></span></a>
-      </div>
+    {{MAGAZALAR}}
     <div class="dugmeler ikincil-satir" style="justify-content:center">
       <a class="dugme ikincil" href="destek/">Destek</a>
       <a class="dugme ikincil" href="mailto:repliquotes.destek@gmail.com">Bize yaz</a>
@@ -240,35 +201,3 @@
 </section>
 
 </main>
-
-<footer>
-  <div class="kap">
-    <div>
-      <a class="logo" href="./"><img src="img/ikon.png" alt=""><span class="marka">REPLI<span>QUOTES</span></span></a>
-      <p>Film ve dizi repliklerini bul, biriktir, oyna ve paylaş.</p>
-    </div>
-    <div>
-      <h4>Uygulama</h4>
-      <ul>
-        <li><a href="#ozellikler">Özellikler</a></li>
-        <li><a href="#oyunlar">Oyunlar</a></li>
-        <li><a href="#indir">İndir</a></li>
-      </ul>
-    </div>
-    <div>
-      <h4>Yardım</h4>
-      <ul>
-        <li><a href="destek/">Destek</a></li>
-        <li><a href="gizlilik/">Gizlilik Politikası</a></li>
-        <li><a href="mailto:repliquotes.destek@gmail.com">repliquotes.destek@gmail.com</a></li>
-      </ul>
-    </div>
-    <div class="kaynak">
-      Bu ürün TMDB API'sini kullanır ancak TMDB tarafından desteklenmemekte veya onaylanmamaktadır. Replikler film ve dizi altyazılarından (OpenSubtitles.com) alınır.<br>
-      © 2026 Erdinç Tazegül. App Store, Apple Inc.'in; Google Play, Google LLC'nin ticari markasıdır.
-    </div>
-  </div>
-</footer>
-
-</body>
-</html>
