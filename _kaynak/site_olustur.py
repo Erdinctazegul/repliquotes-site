@@ -99,7 +99,7 @@ def alt(p):
       </ul>
     </div>
     <div class="kaynak">
-      Bu ürün TMDB API'sini kullanır ancak TMDB tarafından desteklenmemekte veya onaylanmamaktadır. Replikler film ve dizi altyazılarından (OpenSubtitles.com) alınır.<br>
+      Bu uygulama TMDB API'sini TMDB'nin kullanım koşullarına uygun olarak kullanır. TMDB bu uygulamanın resmi ortağı veya onaylayıcısı değildir. Replikler film ve dizi altyazılarından (OpenSubtitles.com) alınır.<br>
       © 2026 Erdinç Tazegül. App Store, Apple Inc.'in; Google Play, Google LLC'nin ticari markasıdır.
     </div>
   </div>
