@@ -1,0 +1,28 @@
+# Sunucuyu uyanik tut.
+#
+# NEDEN: API ucretsiz MonsterASP planinda; bir sure istek gelmezse IIS
+# uygulamayi uyutuyor. Uyuyan sunucuya gelen ILK istek 6-9 sn suruyor, bazen
+# 502 donuyor (olculdu: 28.09.2026, 6.8 sn -> sonrakiler 0.37 sn). App Store
+# incelemesinde ya da ilk acilista kullanici bunu "uygulama calismiyor" diye
+# goruyor. 5 dakikada bir /health yoklamasi uygulamayi sicak tutar.
+#
+# /health veritabanina da dokunur (CanConnectAsync), yani baglanti havuzu da
+# sicak kalir.
+name: Sunucu uyanik
+
+on:
+  schedule:
+    - cron: "*/5 * * * *"
+  workflow_dispatch:
+
+jobs:
+  yokla:
+    runs-on: ubuntu-latest
+    timeout-minutes: 2
+    steps:
+      - name: /health
+        run: |
+          for adres in https://repliquotes.runasp.net/health https://repliquotes.runasp.net/; do
+            kod=$(curl -s -o /dev/null -w "%{http_code} %{time_total}s" -m 60 "$adres" || true)
+            echo "$adres -> $kod"
+          done
