@@ -9,6 +9,8 @@ S = os.path.dirname(os.path.abspath(__file__))
 W = os.path.dirname(S)
 ESKI = os.path.join(S, "eski")
 MAIL = "repliquotes.destek@gmail.com"
+APP_STORE_ID = "6815878501"
+APP_STORE = f"https://apps.apple.com/tr/app/repliquotes/id{APP_STORE_ID}"
 
 IK = {
     "destek": '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/><path d="M9.5 9.5a2.5 2.5 0 1 1 3.3 2.4c-.5.2-.8.6-.8 1.1v.5"/><path d="M12 16.5h.01"/></svg>',
@@ -23,7 +25,7 @@ IK = {
 }
 
 MAGAZALAR = f'''<div class="magazalar">
-        <a class="magaza" href="#indir" aria-label="App Store'da yakında">{IK["apple"]}<span><small>Yakında</small><strong>App Store</strong></span></a>
+        <a class="magaza" href="{APP_STORE}" aria-label="App Store'dan indir">{IK["apple"]}<span><small>İndir</small><strong>App Store</strong></span></a>
         <a class="magaza" href="#indir" aria-label="Google Play'de yakında">{IK["play"]}<span><small>Yakında</small><strong>Google Play</strong></span></a>
       </div>'''
 
@@ -52,6 +54,7 @@ def bas(baslik, aciklama, p, aktif=None, og=False):
 <title>{baslik}</title>
 <meta name="description" content="{aciklama}">
 <meta name="theme-color" content="#0B0B0D">
+<meta name="apple-itunes-app" content="app-id={APP_STORE_ID}">
 <link rel="icon" type="image/png" href="{p}favicon.png">
 <link rel="apple-touch-icon" href="{p}apple-touch-icon.png">
 {ogm}<link rel="stylesheet" href="{p}assets/site.css">
