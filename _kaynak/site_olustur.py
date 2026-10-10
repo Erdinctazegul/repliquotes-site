@@ -36,7 +36,7 @@ def bas(baslik, aciklama, p, aktif=None, og=False):
     if og:
         ogm = f'''<meta property="og:type" content="website">
 <meta property="og:title" content="RepliQuotes · Aklındaki repliği anında bul">
-<meta property="og:description" content="Film ve dizi repliklerini ara, yapım yapım keşfet, kendi listeni oluştur, oyna ve paylaş.">
+<meta property="og:description" content="Film ve dizi repliklerini ara, yapım yapım keşfet, kendi listeni oluştur, arkadaşlarınla oyna ve paylaş.">
 <meta property="og:image" content="https://repliquotes.com/img/og.jpg">
 <meta property="og:url" content="https://repliquotes.com/">
 <link rel="canonical" href="https://repliquotes.com/">
@@ -89,6 +89,7 @@ def alt(p):
       <ul>
         <li><a href="{p}#ozellikler">Özellikler</a></li>
         <li><a href="{p}#oyunlar">Oyunlar</a></li>
+        <li><a href="{p}#gruplar">Gruplar</a></li>
         <li><a href="{p}#indir">İndir</a></li>
       </ul>
     </div>
@@ -195,16 +196,16 @@ def destek():
            "Having a problem or have a suggestion? Answers to the most common questions are below; if you can't find yours, write to us. We usually reply within 2 business days.", 'p class="ozet-yazi"')}
       <div class="bas-alt">
         {dil_sec()}
-        <span class="tarih">{iki("Son güncelleme: 28 Eylül 2026", "Last updated: September 28, 2026")}</span>
+        <span class="tarih">{iki("Son güncelleme: 10 Ekim 2026", "Last updated: October 10, 2026")}</span>
       </div>
       <div class="hizli" data-dil="tr">
         <a href="mailto:{MAIL}"><span class="ik">{IK["posta"]}</span><b>Bize yaz</b><span>{MAIL}</span></a>
-        <a href="../gizlilik/#tr-6"><span class="ik">{IK["cop"]}</span><b>Hesabımı sil</b><span>Profil → Hesabımı Sil. Kalıcıdır, tüm verilerin silinir.</span></a>
+        <a href="../gizlilik/#tr-6"><span class="ik">{IK["cop"]}</span><b>Hesabımı sil</b><span>Profil → Ayarlar → Hesabımı Sil. Kalıcıdır, tüm verilerin silinir.</span></a>
         <a href="../gizlilik/"><span class="ik">{IK["kalkan"]}</span><b>Gizlilik politikası</b><span>Hangi verileri neden topladığımızı oku.</span></a>
       </div>
       <div class="hizli" data-dil="en" lang="en">
         <a href="mailto:{MAIL}"><span class="ik">{IK["posta"]}</span><b>Email us</b><span>{MAIL}</span></a>
-        <a href="../gizlilik/#en-6"><span class="ik">{IK["cop"]}</span><b>Delete my account</b><span>Profil → Hesabımı Sil (Delete My Account). Permanent; all your data is deleted.</span></a>
+        <a href="../gizlilik/#en-6"><span class="ik">{IK["cop"]}</span><b>Delete my account</b><span>Profil → Ayarlar → Hesabımı Sil (Delete My Account). Permanent; all your data is deleted.</span></a>
         <a href="../gizlilik/#en"><span class="ik">{IK["kalkan"]}</span><b>Privacy policy</b><span>Read what data we collect and why.</span></a>
       </div>
     </div>
@@ -280,7 +281,7 @@ def gizlilik():
            "We explain plainly what data we collect, why we collect it, who we share it with and how you can delete it.", 'p class="ozet-yazi"')}
       <div class="bas-alt">
         {dil_sec()}
-        <span class="tarih">{iki("Son güncelleme: 28 Eylül 2026", "Last updated: September 28, 2026")}</span>
+        <span class="tarih">{iki("Son güncelleme: 10 Ekim 2026", "Last updated: October 10, 2026")}</span>
       </div>
     </div>
   </section>
@@ -319,7 +320,7 @@ if __name__ == "__main__":
                 f'sizes="(max-width: 560px) 46vw, 300px" alt="{alt_}" width="{w}" height="{h}" decoding="async"{tembel}>')
     govde = re.sub(r'\{\{IMG (\w+) "([^"]*)"\}\}', img, govde)
     ana = bas("RepliQuotes · Film ve dizi repliklerini bul, oyna, paylaş",
-              "Aklındaki repliği saniyeler içinde bul. Film ve dizilerden yüz binlerce replik, yapım sayfaları, kendi replik listelerin, 4 oyun ve Makara ile anında rakip.",
+              "Aklındaki repliği saniyeler içinde bul. Film ve dizilerden yüz binlerce replik, yapım sayfaları, kendi replik listelerin, 4 oyun, Makara ile anında rakip, grup sohbetleri ve grup maçları.",
               "", None, og=True) + govde + alt("") + "\n</body>\n</html>\n"
     open(os.path.join(W, "index.html"), "w", encoding="utf-8").write(ana)
     print("tamam")

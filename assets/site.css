@@ -171,6 +171,20 @@ h2 em { font-style: normal; color: var(--accent); }
 .oyun-alt { text-align: center; margin-top: 40px; color: var(--muted); font-size: 16px; }
 .oyun-alt b { color: var(--text); }
 
+/* ── Tanitim: arkadaslar (gorselsiz kartlar) ──────────────────── */
+.yenilik-izgara { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.yenilik {
+  background: var(--card); border: 1px solid var(--line); border-radius: var(--radius);
+  padding: 24px 22px; transition: border-color .2s, transform .2s;
+}
+.yenilik:hover { border-color: var(--accent-line); transform: translateY(-3px); }
+.yenilik .ik { width: 42px; height: 42px; border-radius: 12px; display: grid; place-items: center; margin-bottom: 14px; background: var(--accent-soft); color: var(--accent); }
+.yenilik .ik svg { width: 22px; height: 22px; }
+.yenilik h3 { font-size: 19px; margin: 0 0 6px; font-weight: 800; }
+.yenilik p { color: var(--muted); font-size: 15px; line-height: 1.55; margin: 0; }
+@media (max-width: 900px) { .yenilik-izgara { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px) { .yenilik-izgara { grid-template-columns: 1fr; } }
+
 /* ── Tanitim: kapanis ───────────────────────────────────────── */
 .kapanis {
   text-align: center; padding: 100px 0;

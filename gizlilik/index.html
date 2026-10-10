@@ -37,7 +37,7 @@
           <button type="button" value="tr" aria-pressed="true">Türkçe</button>
           <button type="button" value="en" aria-pressed="false">English</button>
         </div>
-        <span class="tarih"><span data-dil="tr">Son güncelleme: 28 Eylül 2026</span><span data-dil="en" lang="en">Last updated: September 28, 2026</span></span>
+        <span class="tarih"><span data-dil="tr">Son güncelleme: 10 Ekim 2026</span><span data-dil="en" lang="en">Last updated: October 10, 2026</span></span>
       </div>
     </div>
   </section>
@@ -59,14 +59,16 @@
 <ul>
   <li><strong>E-posta adresi, kullanıcı adı ve şifre.</strong> Şifren sunucuda düz metin olarak değil, geri çevrilemez biçimde (hash) saklanır.</li>
   <li><strong>İsteğe bağlı profil bilgileri:</strong> ad soyad ve profil fotoğrafı.</li>
-  <li><strong>Davet kodu</strong>, kayıt olurken girersen.</li>
+  <li><strong>Apple ya da Google ile giriş:</strong> bu yolla girersen Apple veya Google'dan yalnızca hesap kimliğin ve e-posta adresin alınır; Apple ile girişte adın yalnızca kullanıcı adı önerisi için kullanılır. Bu hesaplar için şifre oluşturulmaz.</li>
+  <li><strong>E-posta doğrulama kodu:</strong> e-postayla kayıt olurken adresine 6 haneli bir kod gönderilir.</li>
+  <li><strong>Davet kodu</strong>, kayıt olurken girersen ya da arkadaşını davet ettiğinde.</li>
 </ul>
 
 <h3>Uygulamada oluşturduğun içerik</h3>
 <ul>
-  <li>Paylaştığın gönderiler ve görseller, yorumlar, beğeniler, favoriler, listeler ve hikâyeler. Hikâyeler 24 saat sonra görünmez olur.</li>
+  <li>Paylaştığın gönderiler (ve seçtiğin görünürlük: Herkese Açık ya da Arkadaşlar), uygulamada oluşturduğun görseller, yorumlar, beğeniler, favoriler ve listeler.</li>
   <li>Takip ettiğin ve seni takip eden hesaplar, engellediğin hesaplar.</li>
-  <li><strong>Özel mesajlar.</strong> Mesajlar sunucuda saklanır; uçtan uca şifreli değildir.</li>
+  <li><strong>Özel mesajlar ve gruplar.</strong> Birebir ve grup mesajların (gönderdiğin replik kartları ve görseller dahil), üye olduğun gruplar, grup adı ve fotoğrafı. Mesajlar sunucuda saklanır; uçtan uca şifreli değildir.</li>
   <li>Oyun cevapları, puanlar, seviyeler, lig ve istatistikler.</li>
   <li>Gönderdiğin şikâyetler ve varsa bunlarla ilgili moderasyon kayıtları.</li>
 </ul>
@@ -75,18 +77,20 @@
 <ul>
   <li><strong>Arama geçmişi:</strong> aradığın kelimeler ve sonuç sayısı hesabına kaydedilir; son aramalarını gösterebilmek içindir.</li>
   <li><strong>Son görülme zamanı:</strong> uygulama açıkken kaydedilir; diğer kullanıcılara çevrimiçi olup olmadığını göstermek için kullanılır.</li>
+  <li><strong>Bildirim anahtarı:</strong> bildirim almayı kabul edersen telefonunun bildirim anahtarı (push token) ve platformu sunucuda saklanır. Mesaj bildirimlerinde mesajın ilk 60 karakteri yer alır ve bildirim Apple veya Google üzerinden iletilir.</li>
+  <li><strong>Gizlilik tercihlerin:</strong> Trendde gizlen ve Sıralamalarda gizlen ayarları.</li>
   <li><strong>Teknik kayıtlar:</strong> sunucu, güvenlik ve hata ayıklama amacıyla isteklerin IP adresi, zamanı ve istenen adres gibi standart kayıtlarını tutabilir.</li>
 </ul>
 
 <h3>Cihazında kalanlar</h3>
 <ul>
-  <li>Oturum anahtarın cihazının güvenli deposunda (iOS Anahtar Zinciri) saklanır.</li>
-  <li>Galeriden görsel seçtiğinde yalnızca seçtiğin görsel yüklenir; fotoğraf arşivinin tamamına erişilmez.</li>
+  <li>Oturum anahtarın cihazının güvenli deposunda (iOS'ta Anahtar Zinciri, Android'de şifreli depolama) saklanır.</li>
+  <li>Uygulama fotoğraf arşivini okumaz. Oluşturduğun görseli kaydetmek istediğinde yalnızca Fotoğraflar'a ekleme izni istenir.</li>
   <li>Makara'da rakip bulmak için yapılan sallama hareketi cihazın hareket sensöründen okunur; bu veri cihazdan çıkmaz ve saklanmaz.</li>
 </ul>
 
 <h3>Toplamadıklarımız</h3>
-<p>Konum, rehber, reklam kimliği (IDFA), sağlık verisi ve ödeme bilgisi toplanmaz. Uygulamada üçüncü taraf analiz, reklam veya izleme aracı yoktur ve seni başka şirketlerin uygulama ya da sitelerinde izlemeyiz.</p>
+<p>Konum, rehber, kamera, mikrofon, reklam kimliği (IDFA / Android reklam kimliği), sağlık verisi ve ödeme bilgisi toplanmaz. Uygulamada üçüncü taraf analiz, reklam veya izleme aracı yoktur ve seni başka şirketlerin uygulama ya da sitelerinde izlemeyiz.</p>
 </section>
 <section class="bolum" id="tr-3"><h2><span class="n">03</span>Verileri neden kullanıyoruz</h2>
 <ul>
@@ -104,20 +108,22 @@
   <tr><td data-etiket="Sağlayıcı">MonsterASP.NET</td><td data-etiket="Ne için">Sunucu ve veritabanı barındırma</td><td data-etiket="Hangi veri">Yukarıda sayılan hesap, içerik ve kullanım verileri; yüklediğin görseller</td></tr>
   <tr><td data-etiket="Sağlayıcı">OpenAI</td><td data-etiket="Ne için">Anlamsal arama</td><td data-etiket="Hangi veri">Yalnızca yazdığın arama metni; hesabınla ya da kimliğinle ilişkilendirilmeden</td></tr>
   <tr><td data-etiket="Sağlayıcı">Pinecone</td><td data-etiket="Ne için">Arama dizini</td><td data-etiket="Hangi veri">Arama metninin sayısal karşılığı (vektör); kimlik bilgisi yok</td></tr>
-  <tr><td data-etiket="Sağlayıcı">TMDB, TVmaze</td><td data-etiket="Ne için">Afiş, kapak ve oyuncu görselleri</td><td data-etiket="Hangi veri">Görseller cihazına doğrudan bu sitelerden yüklenir; bu sırada IP adresin bu hizmetlere görünür</td></tr>
+  <tr><td data-etiket="Sağlayıcı">Apple</td><td data-etiket="Ne için">Apple ile giriş; iPhone bildirimleri (APNs)</td><td data-etiket="Hangi veri">Apple ile girersen hesap kimliğin ve e-postan; bildirim anahtarı ve bildirim metni</td></tr>
+  <tr><td data-etiket="Sağlayıcı">Google</td><td data-etiket="Ne için">Google ile giriş; Android bildirimleri (Firebase Cloud Messaging); doğrulama e-postaları (Gmail)</td><td data-etiket="Hangi veri">Google ile girersen hesap kimliğin ve e-postan; bildirim anahtarı ve bildirim metni; doğrulama kodu gönderilen e-posta adresi</td></tr>
+  <tr><td data-etiket="Sağlayıcı">TMDB, TVmaze</td><td data-etiket="Ne için">Afiş, kapak, sahne ve oyuncu görselleri</td><td data-etiket="Hangi veri">Görseller cihazına doğrudan bu sitelerden yüklenir; bu sırada IP adresin bu hizmetlere görünür</td></tr>
 </table>
 </div>
 <p>Bunların dışında verilerini kimseyle paylaşmayız; ancak yasal olarak zorunlu olduğumuz durumlarda yetkili makamlarla paylaşabiliriz.</p>
 </section>
 <section class="bolum" id="tr-5"><h2><span class="n">05</span>Başkalarının gördükleri</h2>
-<p>Kullanıcı adın, profil fotoğrafın, ad soyadın (girdiysen), gönderilerin, yorumların, hikâyelerin, oyun sıralaman ve çevrimiçi durumun diğer kullanıcılar tarafından görülebilir. E-posta adresin başka kullanıcılara gösterilmez.</p>
+<p>Kullanıcı adın, profil fotoğrafın, ad soyadın (girdiysen), gönderilerin, yorumların, oyun sıralaman ve çevrimiçi durumun diğer kullanıcılar tarafından görülebilir. Arkadaşlar olarak paylaştığın gönderileri yalnızca seni takip edenler görür; grup mesajlarını grubun üyeleri görür. Trendde ve sıralamalarda görünmek istemiyorsan <em>Profil → Ayarlar → Gizlilik</em> ekranından kapatabilirsin. E-posta adresin başka kullanıcılara gösterilmez.</p>
 </section>
 <section class="bolum" id="tr-6"><h2><span class="n">06</span>Saklama süresi ve hesap silme</h2>
 <p>Verilerin, hesabın açık olduğu sürece saklanır.</p>
 <div class="kart">
-  <strong>Hesabını silmek için:</strong> uygulamada <em>Profil → Hesabımı Sil</em> adımını izle. Silme işlemi kalıcıdır ve geri alınamaz. Hesap bilgilerin, gönderilerin (ve bunlara yapılan beğeni ve yorumlar), yorumların, mesajların (karşı tarafın gelen kutusundan da), favorilerin, listelerin, hikâyelerin, oyun istatistiklerin, arama geçmişin ve bildirimlerin silinir.
+  <strong>Hesabını silmek için:</strong> uygulamada <em>Profil → Ayarlar → Hesabımı Sil</em> adımını izle. Silme işlemi kalıcıdır ve geri alınamaz. Hesap bilgilerin, gönderilerin (ve bunlara yapılan beğeni ve yorumlar), yorumların, mesajların (karşı tarafın gelen kutusundan da), grup mesajların ve grup üyeliklerin, kurduğun gruplar, favorilerin, listelerin, oyun istatistiklerin ve lig puanların, arama geçmişin, bildirimlerin ve bildirim anahtarların silinir.
 </div>
-<p>Uygulamaya erişemiyorsan silme talebini yukarıdaki e-posta adresine gönderebilirsin. Sunucu teknik kayıtları kısa süre sonra kendiliğinden silinir.</p>
+<p>Uygulamaya erişemiyorsan silme talebini yukarıdaki e-posta adresine gönderebilirsin. Başkalarının senin hakkında gönderdiği şikâyet kayıtları, kötüye kullanımı önlemek için saklanabilir. Sunucu teknik kayıtları kısa süre sonra kendiliğinden silinir.</p>
 </section>
 <section class="bolum" id="tr-7"><h2><span class="n">07</span>Güvenlik</h2>
 <p>Uygulama ile sunucu arasındaki bağlantı şifrelidir (HTTPS), şifreler hash'lenerek saklanır ve oturum anahtarları cihazın güvenli deposunda tutulur. Hiçbir sistem kusursuz değildir; yine de verilerini korumak için makul teknik önlemleri alırız.</p>
@@ -149,13 +155,15 @@ Contact: <a href="mailto:repliquotes.destek@gmail.com">repliquotes.destek@gmail.
 <ul>
   <li><strong>Email address, username and password.</strong> Passwords are stored as a one-way hash, never in plain text.</li>
   <li><strong>Optional profile details:</strong> full name and profile photo.</li>
-  <li><strong>Invite code</strong>, if you enter one at sign-up.</li>
+  <li><strong>Sign in with Apple or Google:</strong> if you use these, we receive only your account identifier and email address; with Apple, your first name is used only to suggest a username. No password is created for these accounts.</li>
+  <li><strong>Email verification code:</strong> when you sign up with email, a 6-digit code is sent to your address.</li>
+  <li><strong>Invite code</strong>, if you enter one at sign-up or invite a friend.</li>
 </ul>
 <h3>Content you create</h3>
 <ul>
-  <li>Posts and images, comments, likes, favorites, lists and stories. Stories stop being visible after 24 hours.</li>
+  <li>Posts (and the visibility you choose: Public or Friends), images you create in the app, comments, likes, favorites and lists.</li>
   <li>Accounts you follow, accounts following you and accounts you block.</li>
-  <li><strong>Private messages.</strong> Messages are stored on the server and are not end-to-end encrypted.</li>
+  <li><strong>Private messages and groups.</strong> Your direct and group messages (including quote cards and images you send), the groups you belong to, and group names and photos. Messages are stored on the server and are not end-to-end encrypted.</li>
   <li>Game answers, scores, levels, league and statistics.</li>
   <li>Reports you submit and any related moderation records.</li>
 </ul>
@@ -163,16 +171,18 @@ Contact: <a href="mailto:repliquotes.destek@gmail.com">repliquotes.destek@gmail.
 <ul>
   <li><strong>Search history:</strong> your search terms and result counts are saved to your account to show your recent searches.</li>
   <li><strong>Last seen time:</strong> recorded while the app is open and used to show other users whether you are online.</li>
+  <li><strong>Notification token:</strong> if you allow notifications, your device's push token and platform are stored on the server. Message notifications contain the first 60 characters of the message and are delivered through Apple or Google.</li>
+  <li><strong>Privacy preferences:</strong> your Hide from trending and Hide from rankings settings.</li>
   <li><strong>Technical logs:</strong> the server may keep standard request logs (IP address, time, requested path) for security and debugging.</li>
 </ul>
 <h3>Stays on your device</h3>
 <ul>
-  <li>Your session token is stored in the device's secure storage (iOS Keychain).</li>
-  <li>When you pick an image, only that image is uploaded; the app does not access your whole photo library.</li>
+  <li>Your session token is stored in the device's secure storage (Keychain on iOS, encrypted storage on Android).</li>
+  <li>The app does not read your photo library. When you save an image you created, it only asks for permission to add it to Photos.</li>
   <li>The shake gesture used to find an opponent in Makara is read from the motion sensor; this data never leaves your device and is not stored.</li>
 </ul>
 <h3>What we don't collect</h3>
-<p>No location, contacts, advertising identifier (IDFA), health data or payment information. The app contains no third-party analytics, advertising or tracking tools, and we do not track you across other companies' apps or websites.</p>
+<p>No location, contacts, camera, microphone, advertising identifier (IDFA / Android advertising ID), health data or payment information. The app contains no third-party analytics, advertising or tracking tools, and we do not track you across other companies' apps or websites.</p>
 </section>
 <section class="bolum" id="en-3"><h2><span class="n">03</span>Why we use data</h2>
 <ul>
@@ -190,20 +200,22 @@ Contact: <a href="mailto:repliquotes.destek@gmail.com">repliquotes.destek@gmail.
   <tr><td data-etiket="Provider">MonsterASP.NET</td><td data-etiket="Purpose">Server and database hosting</td><td data-etiket="Data">Account, content and usage data listed above; uploaded images</td></tr>
   <tr><td data-etiket="Provider">OpenAI</td><td data-etiket="Purpose">Semantic search</td><td data-etiket="Data">Only the search text you type, not linked to your account or identity</td></tr>
   <tr><td data-etiket="Provider">Pinecone</td><td data-etiket="Purpose">Search index</td><td data-etiket="Data">A numeric representation (vector) of the search text; no identity</td></tr>
-  <tr><td data-etiket="Provider">TMDB, TVmaze</td><td data-etiket="Purpose">Posters, backdrops and actor images</td><td data-etiket="Data">Images load directly from these services, which can see your IP address</td></tr>
+  <tr><td data-etiket="Provider">Apple</td><td data-etiket="Purpose">Sign in with Apple; iPhone notifications (APNs)</td><td data-etiket="Data">Your account identifier and email if you sign in with Apple; notification token and notification text</td></tr>
+  <tr><td data-etiket="Provider">Google</td><td data-etiket="Purpose">Google sign-in; Android notifications (Firebase Cloud Messaging); verification emails (Gmail)</td><td data-etiket="Data">Your account identifier and email if you sign in with Google; notification token and notification text; the email address the verification code is sent to</td></tr>
+  <tr><td data-etiket="Provider">TMDB, TVmaze</td><td data-etiket="Purpose">Posters, backdrops, episode stills and actor images</td><td data-etiket="Data">Images load directly from these services, which can see your IP address</td></tr>
 </table>
 </div>
 <p>We share data with no one else, except where legally required.</p>
 </section>
 <section class="bolum" id="en-5"><h2><span class="n">05</span>What others can see</h2>
-<p>Your username, profile photo, full name (if provided), posts, comments, stories, game rankings and online status may be visible to other users. Your email address is never shown to other users.</p>
+<p>Your username, profile photo, full name (if provided), posts, comments, game rankings and online status may be visible to other users. Posts shared as Friends are visible only to people who follow you; group messages are visible to group members. To stay out of trending and rankings, use <em>Profil → Ayarlar → Gizlilik</em> (Profile → Settings → Privacy). Your email address is never shown to other users.</p>
 </section>
 <section class="bolum" id="en-6"><h2><span class="n">06</span>Retention and account deletion</h2>
 <p>Your data is kept while your account exists.</p>
 <div class="kart">
-  <strong>To delete your account:</strong> in the app, go to <em>Profil → Hesabımı Sil</em> (Profile → Delete My Account). Deletion is permanent. Your account details, posts (including likes and comments on them), comments, messages (also from the other person's inbox), favorites, lists, stories, game statistics, search history and notifications are deleted.
+  <strong>To delete your account:</strong> in the app, go to <em>Profil → Ayarlar → Hesabımı Sil</em> (Profile → Settings → Delete My Account). Deletion is permanent. Your account details, posts (including likes and comments on them), comments, messages (also from the other person's inbox), group messages and memberships, groups you created, favorites, lists, game statistics and league points, search history, notifications and notification tokens are deleted.
 </div>
-<p>If you cannot access the app, send a deletion request to the email address above. Server technical logs are removed automatically after a short period.</p>
+<p>If you cannot access the app, send a deletion request to the email address above. Reports that other users filed about you may be kept to prevent abuse. Server technical logs are removed automatically after a short period.</p>
 </section>
 <section class="bolum" id="en-7"><h2><span class="n">07</span>Security</h2>
 <p>Traffic between the app and the server is encrypted (HTTPS), passwords are hashed and session tokens are kept in the device's secure storage. No system is perfect, but we take reasonable technical measures to protect your data.</p>
@@ -235,6 +247,7 @@ Contact: <a href="mailto:repliquotes.destek@gmail.com">repliquotes.destek@gmail.
       <ul>
         <li><a href="../#ozellikler">Özellikler</a></li>
         <li><a href="../#oyunlar">Oyunlar</a></li>
+        <li><a href="../#gruplar">Gruplar</a></li>
         <li><a href="../#indir">İndir</a></li>
       </ul>
     </div>
