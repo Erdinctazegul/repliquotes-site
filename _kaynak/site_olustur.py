@@ -61,7 +61,6 @@ def bas(baslik, aciklama, p, aktif=None, og=False):
 <header class="ust">
   <div class="kap">
     <a class="logo" href="{p or './'}" aria-label="RepliQuotes ana sayfa">
-      <img src="{p}img/ikon.png" alt="">
       <span class="marka">REPLI<span>QUOTES</span></span>
     </a>
     <nav class="menu" aria-label="Ana menü">
@@ -135,6 +134,12 @@ def dil_sec():
         </div>'''
 
 
+def iki(tr, en, etiket="span"):
+    """Sayfa basindaki metinler icin TR + EN cifti; DIL_JS birini saklar."""
+    kapa = etiket.split()[0]
+    return f'<{etiket} data-dil="tr">{tr}</{kapa}><{etiket} data-dil="en" lang="en">{en}</{kapa}>'
+
+
 def bolum_al(html, kimlik):
     m = re.search(rf'<section id="{kimlik}"[^>]*>(.*?)</section>', html, re.S)
     return m.group(1)
@@ -151,6 +156,7 @@ def temizle_ust(icerik):
 def destek():
     eski = open(os.path.join(ESKI, "destek.html"), encoding="utf-8").read()
     eski = eski.replace('href="../"', 'href="../gizlilik/"')
+    eski = re.sub(r'(<section id="en".*?)href="\.\./gizlilik/"', r'\1href="../gizlilik/#en"', eski, flags=re.S)
 
     def cevir(dil):
         ic = temizle_ust(bolum_al(eski, dil))
@@ -180,17 +186,23 @@ def destek():
 <main>
   <section class="sayfa-bas">
     <div class="kap">
-      <div class="yol"><a href="../">Ana sayfa</a> / Destek</div>
-      <h1>Destek</h1>
-      <p class="ozet-yazi">Bir sorun mu var ya da bir önerin mi? Aşağıda en çok sorulan soruların cevapları var; bulamazsan bize yaz, genellikle 2 iş günü içinde dönüyoruz.</p>
+      <div class="yol"><a href="../">{iki("Ana sayfa", "Home")}</a> / {iki("Destek", "Support")}</div>
+      <h1>{iki("Destek", "Support")}</h1>
+      {iki("Bir sorun mu var ya da bir önerin mi? Aşağıda en çok sorulan soruların cevapları var; bulamazsan bize yaz, genellikle 2 iş günü içinde dönüyoruz.",
+           "Having a problem or have a suggestion? Answers to the most common questions are below; if you can't find yours, write to us. We usually reply within 2 business days.", 'p class="ozet-yazi"')}
       <div class="bas-alt">
         {dil_sec()}
-        <span class="tarih">Son güncelleme: 28 Eylül 2026</span>
+        <span class="tarih">{iki("Son güncelleme: 28 Eylül 2026", "Last updated: September 28, 2026")}</span>
       </div>
-      <div class="hizli">
+      <div class="hizli" data-dil="tr">
         <a href="mailto:{MAIL}"><span class="ik">{IK["posta"]}</span><b>Bize yaz</b><span>{MAIL}</span></a>
         <a href="../gizlilik/#tr-6"><span class="ik">{IK["cop"]}</span><b>Hesabımı sil</b><span>Profil → Hesabımı Sil. Kalıcıdır, tüm verilerin silinir.</span></a>
         <a href="../gizlilik/"><span class="ik">{IK["kalkan"]}</span><b>Gizlilik politikası</b><span>Hangi verileri neden topladığımızı oku.</span></a>
+      </div>
+      <div class="hizli" data-dil="en" lang="en">
+        <a href="mailto:{MAIL}"><span class="ik">{IK["posta"]}</span><b>Email us</b><span>{MAIL}</span></a>
+        <a href="../gizlilik/#en-6"><span class="ik">{IK["cop"]}</span><b>Delete my account</b><span>Profil → Hesabımı Sil (Delete My Account). Permanent; all your data is deleted.</span></a>
+        <a href="../gizlilik/#en"><span class="ik">{IK["kalkan"]}</span><b>Privacy policy</b><span>Read what data we collect and why.</span></a>
       </div>
     </div>
   </section>
@@ -259,12 +271,13 @@ def gizlilik():
 <main>
   <section class="sayfa-bas">
     <div class="kap">
-      <div class="yol"><a href="../">Ana sayfa</a> / Gizlilik</div>
-      <h1>Gizlilik Politikası</h1>
-      <p class="ozet-yazi">Hangi verileri topladığımızı, neden topladığımızı, kimlerle paylaştığımızı ve verilerini nasıl silebileceğini açıkça anlatıyoruz.</p>
+      <div class="yol"><a href="../">{iki("Ana sayfa", "Home")}</a> / {iki("Gizlilik", "Privacy")}</div>
+      <h1>{iki("Gizlilik Politikası", "Privacy Policy")}</h1>
+      {iki("Hangi verileri topladığımızı, neden topladığımızı, kimlerle paylaştığımızı ve verilerini nasıl silebileceğini açıkça anlatıyoruz.",
+           "We explain plainly what data we collect, why we collect it, who we share it with and how you can delete it.", 'p class="ozet-yazi"')}
       <div class="bas-alt">
         {dil_sec()}
-        <span class="tarih">Son güncelleme: 28 Eylül 2026</span>
+        <span class="tarih">{iki("Son güncelleme: 28 Eylül 2026", "Last updated: September 28, 2026")}</span>
       </div>
     </div>
   </section>
